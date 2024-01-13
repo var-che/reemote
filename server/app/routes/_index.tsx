@@ -1,10 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
-import { storageManager, StorageItem } from "~/data.server";
+import { StorageItem } from "~/data.server";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Reemote" },
+    { name: "description", content: "Welcome to Reemote!" },
   ];
 };
 
@@ -13,7 +13,7 @@ export default function Index() {
 
     try {
       const response = await fetch('/write?operation=' + JSON.stringify(op), {
-        method: 'POST', // or 'GET' depending on your API
+        method: 'POST',
       });
 
       if (!response.ok) {
@@ -27,7 +27,7 @@ export default function Index() {
   };
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
+      <h1>Welcome to Reemote</h1>
       <div >
         <button onClick={() => {handleClick(["volume", "up"])}}>Up</button>
         <button onClick={() => {handleClick(["volume", "down"])}}>down</button>
