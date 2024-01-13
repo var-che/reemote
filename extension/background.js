@@ -20,4 +20,4 @@ setInterval(() => {
             });
             // console.log(res)
         })
-}, 1000);
+}, 300);
